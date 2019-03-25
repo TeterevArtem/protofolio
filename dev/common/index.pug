@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+html(lang="ru-RU")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width")
+	meta(http-equiv="X-UA-Compatible" content="chrome=1, IE=edge")
+	link(rel="stylesheet", href="css/main.css")
+	title Главная страница
+body
+	.wrapper
+		.header
+				.auth_wrap
+					a.auth_button(href="#") Авторизация
+		.welcome_container
+			.welcome_block
+				.welcome_front
+					.welcome_image
+						img.wel_img(src="img/sexy-cat.jpg", alt="фото автора")
+					h1.welcome_title Тетерев Артём
+					p.welcome_desk Личный сайт разработчика
+					include parts/_socials
+					include parts/_pagesMenu
+				.welcome_auth
+					h2.auth_title Авторизуйтесь
+					form.auth_form(action="#" method="GET")
+						label.auth_input
+							.auth_icon.auth_icon-user
+							input.auth_field(type="text" placeholder='Логин')
+						label.auth_input
+							.auth_icon.auth_icon-key
+							input.auth_field(type="password" placeholder='Пароль')
+						label.auth_checkbox
+							input.checkbox_hidden(type="checkbox")
+							.fake_checkbox
+							span.checkbox_text Я человек
+						span.auth_question Вы точно не робот?
+						label.auth_radio
+							input.radio_hidden(type="radio" name="question")
+							.fake_radio
+							span.radio_text Да
+						label.auth_radio
+							input.radio_hidden(type="radio" name="question")
+							.fake_radio
+							span.radio_text Не уверен
+						.auth_btn
+							a.auth_link.auth_link-home(href="#") На главную
+							a.auth_link(href="#") Войти
+
+	footer.footer
+		span.footer_text|Тетерев Артём | Сделано с любовью | Loftschool
+	script(src='js/jquery.min.js')
+	script(src='js/flip.js')

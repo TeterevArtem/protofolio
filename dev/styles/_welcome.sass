@@ -1,0 +1,313 @@
+.wrapper
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100%
+  overflow: hidden
+  background: url(../img/background/water.jpg)no-repeat
+  background-size: cover
+  color: #fff
+  &:after
+    content: ''
+    height: rem(50px)
+
+.welcome_container
+  display: flex
+  justify-content: center
+  align-items: center
+  perspective: rem(1000px)
+  
+  
+.header
+  display: flex
+  justify-content: flex-end
+
+.auth_wrap
+  display: inline-block
+  margin: 2rem 2rem
+
+.auth_button
+  text-decoration: none
+  color: #fff
+  border: rem(1px) solid #fff
+  -webkit-border-radius: rem(30px)
+  -moz-border-radius: rem(30px)
+  border-radius: rem(30px)
+  padding: .8rem 1.8rem
+  font-family: sans-serif
+  -webkit-transition: all .3s
+  -moz-transition: all .3s
+  -o-transition: all .3s
+  transition: all .3s
+  &:hover
+    background: $green
+    border-color: $light-green
+
+//welcome_block
+
+
+.welcome_block
+  min-width: rem(379px)
+  -webkit-border-radius: 0 0 rem(10px) rem(10px)
+  -moz-border-radius: 0 0 rem(10px) rem(10px)
+  border-radius: 0 0 rem(10px) rem(10px)
+  background-color: rgba(0, 0, 0, .4) 
+  transform-style: preserve-3d
+  transition: 1s 
+  position: relative
+  
+
+.welcome_front
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center  
+  backface-visibility: hidden
+  
+
+.welcome_image
+  width: rem(140px)
+  height: rem(140px)
+  -webkit-border-radius: 50%
+  -moz-border-radius: 50%
+  border-radius: 50%
+  overflow: hidden
+  margin-top: rem(40px)
+  margin-bottom: rem(20px)
+
+.wel_img
+  width: 100%
+  height: auto
+
+.welcome_title
+  font-family: sans-serif
+  font-size: 2rem
+  margin: 0
+
+//socials
+
+.social_list
+  list-style: none
+  display: flex
+  padding: 0
+  margin: 0
+
+.social_item
+  margin-right: rem(27px)
+
+  &:last-child
+    margin-right: 0
+
+.social_link
+  text-decoration: none
+  vertical-align: middle
+  color: #fff
+  opacity: .5
+  transition: .3s
+  &:hover .vk-fill,&:hover .in-fill, &:hover .github-fill
+    fill: $green
+    
+
+.pages_list
+  width: 100%
+  margin: rem(40px) 0 0 0
+  padding: 0
+  list-style: none
+  display: flex
+  justify-content: space-around
+  flex-wrap: nowrap
+  align-items: center
+  border-radius: 0 0 rem(10px) rem(10px)
+  overflow: hidden
+
+.pages_item
+  border-right: rem(1px) solid #fff
+  text-align: center
+  flex-grow: 2
+  display: flex
+  &:last-child
+    border: none
+
+
+.pages_link
+  color: #fff
+  flex-grow: 2
+  font-family: sans-serif
+  text-decoration: none 
+  padding: rem(10px) 0
+  background: $green
+  &:hover
+    background: $green-hover
+
+
+//flip-welcome-block
+
+.welcome_auth
+  position: absolute
+  text-align: center
+  top: 50%
+  left: 50% 
+  transform: translate(-50%,-50%) rotateY(180deg)
+  backface-visibility: hidden
+  width: 100%
+  height: 100%  
+
+.auth_title
+  margin: rem(40px) 0 rem(60px) 0
+  font-family: $roboreg
+  text-transform: uppercase
+  position: relative
+  &:after
+     content: ''
+     display: block
+     position: absolute
+     top: 180%
+     left: 50%
+     transform: translateX(-50%)
+     height: rem(3px)
+     width: rem(90px)
+     background: #fff
+     border-radius: rem(2px)
+
+.auth_input
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: rem(20px) 0
+
+.auth_icon
+  width: rem(50px)
+  height: rem(50px)
+  background: #f0efea
+  border-radius: rem(20px) 0 0 rem(20px)
+  position: relative
+  &:after
+    content: ''
+    width: rem(15px)
+    height: rem(15px)
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-size: contain
+
+$icons: user, key
+@each $icon in $icons
+  .auth_icon-#{$icon}:after
+    background-image: url(../img/icons/#{$icon}.svg)
+
+.auth_field
+  box-sizing: border-box
+  width: rem(300px)
+  padding-left: rem(20px)
+  border-radius: 0 rem(20px) rem(20px) 0
+  border: none
+  line-height: 3
+  overflow: hidden
+  position: relative
+  outline: none;
+
+.auth_checkbox
+  display: block
+  text-align: center
+  flex-basis: 100%
+  cursor: pointer
+
+.checkbox_hidden
+  display: none
+  &:checked +.fake_checkbox:after
+    display: block
+
+.fake_checkbox
+  position: relative
+  width: rem(20px)
+  height: rem(20px)
+  margin-right: rem(10px)
+  border-radius: rem(3px)
+  background: $green
+  display: inline-block
+  vertical-align: middle
+  &:after
+    display: none
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: rem(20px)
+    height: rem(20px)
+    margin-right: rem(10px)
+    border-radius: rem(3px)
+    background: url(../img/icons/check.png)
+    background-position: center center
+    background-repeat: no-repeat
+
+
+
+.checkbox_text
+  position: relative
+  vertical-align: middle
+  font-family: $roboreg
+
+.auth_question
+  display: block
+
+.auth_radio
+  cursor: pointer
+  display: inline-block
+  flex-basis: 50%
+  text-align: right
+  margin: 0 rem(20px) rem(40px) 0
+  &:last-child
+    margin: 0
+  
+    
+.radio_hidden
+  display: none
+  &:checked + .fake_radio:after 
+    display: block
+
+.fake_radio
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  width: rem(20px)
+  height: rem(20px)
+  border-radius: 50%
+  background: #fff
+  margin-right: rem(10px)
+  &:after
+    display: none
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: rem(10px)
+    height: rem(10px)
+    background: $green
+    border-radius: 50%
+.radio_text
+  vertical-align: middle
+
+.auth_btn
+  border-radius: 0 0 rem(10px) rem(10px)
+  overflow: hidden
+
+.auth_link
+  box-sizing: border-box
+  text-decoration: none
+  color: #fff
+  background: $green
+  display: inline-block
+  width: 50%
+  padding: rem(10px) 0
+  &:hover
+    background: $green-hover
+  &-home
+    border-right: rem(1px) solid #fff
+.footer
+  height: rem(50px)
+  margin-top: rem(-50px)
+  text-align: center
+  color: #fff
