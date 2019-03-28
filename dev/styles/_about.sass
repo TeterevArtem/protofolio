@@ -9,8 +9,7 @@
     background-size: cover
     min-height: rem(600px)
 
-.content
-    max-width: rem(1800px) 
+.header_content
     display: flex
     flex-direction: column
     justify-content: center
@@ -98,6 +97,7 @@
 .header_bottom
     margin-top: rem(137px)
     width: 100%
+
 .arrow_bottom
     display: inline-block
     margin: auto
@@ -105,11 +105,110 @@
     height: rem(16px)
     background: url(../img/icons/portf_arrow_down.svg) center center no-repeat
     background-size: contain
+    position: relative
+    z-index: 5
     &:hover
         transform: translateY(20%)
 
+.main_about
+    width: 100%
+    position: relative
+    margin-top: rem(-178px)
+    padding-top: rem(175px)
+    &:after
+        width: 50%
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 50%
+        background: url(../img/background/about_bg_left.svg) center center no-repeat
+        background-size: cover
+        z-index: 2
+    &:before
+        content: ''
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 50%
+        height: 100%
+        width: 50%
+        background: url(../img/background/about_bg_right.svg) center center no-repeat
+        background-size: cover
+        z-index: 2
+
+          
+.main_content
+    max-width: rem(1800px)
+    padding: 0 rem(85px)
+    margin: auto
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    position: relative
+    z-index: 5
+.about_content
+    flex-basis: 50%
+    &-left
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+    
+.content_left
+    text-align: center
+    width: 50%
+    box-sizing: border-box
+    padding: rem(15px) rem(15px)
+
+.about_logo
+    margin: 0
+    display: block
+    font-family: $sansus
+    font-size: rem(63px)
+    font-weight: 300
+    color: $dark-grey
+    text-transform: uppercase
+    position: relative
+    padding: rem(30px) 0  
+    &:before
+        position: absolute
+        content: ''
+        width: 100%
+        height: auto
+        display: block        
+        top: 0
+        left: 0
+        height: 100%
+        background: url(../img/background/about_header.svg) center center no-repeat
+        background-size: contain
+        opacity: .5
+        z-index: 4
+
+    &:after
+        position: absolute
+        background: $dark-grey
+        content: ''
+        display: inline-block
+        width: rem(90px)
+        height: rem(3px)
+        bottom: -10%
+        left: 50%
+        transform: translate(-50%, -50%)
+    
+.about_image
+    width: 100%
+    height: auto
+    overflow: hidden
+
+.about_img
+    width: 100%
+    height: auto
+
 #skill_circle
     fill: #dfdcd5
+
 .skill_sector
     stroke: #00ff00
     stroke-width: 25

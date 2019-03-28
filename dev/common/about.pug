@@ -9,7 +9,7 @@ html(lang="ru-Ru")
     body
         .wrapper
             header.header
-                .content
+                .header_content
                     .header_top
                         include parts/_socials.pug
                         .humburger_menu
@@ -22,14 +22,16 @@ html(lang="ru-Ru")
                     .header_bottom
                         a.arrow_bottom(href="#")
             .main_about
-                .content
+                .main_content
                     .about_content.about_content-left
-                        h1.about_logo Обо мне
-                        .about_image
-                            img.about_img(src="img/sexy-cat.jpg")
-                        h3.about_title Кто я
-                        article.about_desc
-                            p| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel commodi blanditiis id exercitationem nam. Deserunt adipisci fugit ducimus iusto obcaecati voluptatum sapiente soluta explicabo repellat libero, consectetur a necessitatibus similique sit. Magnam quam illum eligendi! Neque maiores magni commodi suscipit quaerat excepturi ipsum illum nostrum quod veniam libero, blanditiis vitae ullam. Obcaecati et deleniti tenetur reiciendis debitis asperiores possimus tempore minus ipsam consequuntur distinctio, expedita vero hic, nulla omnis a architecto! Repellendus iste autem harum? Voluptate aliquid soluta deserunt impedit eos accusantium fugit eius repellendus, ab neque, sint amet inventore quasi reiciendis tempore ratione odio, at et dolorum repudiandae. Ducimus.
+                        .content_left
+                            h1.about_logo|Обо мне
+                        .content_left
+                            .about_image
+                                img.about_img(src="img/sexy-cat.jpg")
+                            h3.about_title|Кто я
+                            article.about_desc
+                                p| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel commodi blanditiis id exercitationem nam. Deserunt adipisci fugit ducimus iusto obcaecati voluptatum sapiente soluta explicabo repellat libero, consectetur a necessitatibus similique sit. Magnam quam illum eligendi! Neque maiores magni commodi suscipit quaerat excepturi ipsum illum nostrum quod veniam libero, blanditiis vitae ullam. Obcaecati et deleniti tenetur reiciendis debitis asperiores possimus tempore minus ipsam consequuntur distinctio, expedita vero hic, nulla omnis a architecto! Repellendus iste autem harum? Voluptate aliquid soluta deserunt impedit eos accusantium fugit eius repellendus, ab neque, sint amet inventore quasi reiciendis tempore ratione odio, at et dolorum repudiandae. Ducimus.
                     .about_content.about_content-right
                         h3.skills_title Чем я могу быть вам полезен
                         p| Больше всего меня привлекает Front-end, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
@@ -48,13 +50,13 @@ html(lang="ru-Ru")
                         li.footer_item
                             ul.page_list
                                 li.page_item
-                                    a.page_link(href="works.html") Мои работы
+                                    a.page_link(href="works.html")|Мои работы
                                 li.page_item
-                                    a.page_link(href="about.html") Обо мне
+                                    a.page_link(href="about.html")|Обо мне
                                 li.page_item
-                                    a.page_link(href="blog.html") Блог
+                                    a.page_link(href="blog.html")|Блог
                                 li.page_item
-                                    a.page_link(href="index.html") Авторизация
+                                    a.page_link(href="index.html")|8Авторизация
                             include parts/_socials.pug
                         li.footer_item
                             p|Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
