@@ -1,4 +1,4 @@
-.wrapper
+.wrapper_welcome
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -7,21 +7,21 @@
   background: url(../img/background/water.jpg)no-repeat
   background-size: cover
   color: #fff
-  &:after
-    content: ''
-    height: rem(50px)
+
 
 .welcome_container
   display: flex
   justify-content: center
   align-items: center
   perspective: rem(1000px)
-  
-  
-.header
+
+.header_container
   display: flex
   justify-content: flex-end
-
+  max-width: rem(1840px)
+  padding: 0 rem(85px)
+  margin: auto
+  
 .auth_wrap
   display: inline-block
   margin: 2rem 2rem
@@ -86,24 +86,25 @@
 
 //socials
 
-.social_list
+.welsocial_list
   list-style: none
   display: flex
   padding: 0
   margin: 0
 
-.social_item
+.welsocial_item
   margin-right: rem(27px)
 
   &:last-child
     margin-right: 0
 
-.social_link
+.welsocial_link
   text-decoration: none
   vertical-align: middle
   color: #fff
   opacity: .5
   transition: .3s
+  backface-visibility: hidden
   &:hover .vk-fill,&:hover .in-fill, &:hover .github-fill
     fill: $green
     
@@ -293,6 +294,7 @@ $icons: user, key
 .auth_btn
   border-radius: 0 0 rem(10px) rem(10px)
   overflow: hidden
+  display: flex
 
 .auth_link
   box-sizing: border-box
@@ -300,14 +302,16 @@ $icons: user, key
   color: #fff
   background: $green
   display: inline-block
+  border: none
+  cursor: pointer
   width: 50%
   padding: rem(10px) 0
   &:hover
     background: $green-hover
   &-home
     border-right: rem(1px) solid #fff
-.footer
+
+.welcome_footer
   height: rem(50px)
-  margin-top: rem(-50px)
   text-align: center
   color: #fff

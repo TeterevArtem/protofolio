@@ -7,8 +7,9 @@ head
 	link(rel="stylesheet", href="css/main.css")
 	title Главная страница
 body
-	.wrapper
-		.header
+	.wrapper_welcome
+		.header_welcome
+			.header_container
 				.auth_wrap
 					a.auth_button(href="#") Авторизация
 		.welcome_container
@@ -18,8 +19,23 @@ body
 						img.wel_img(src="img/sexy-cat.jpg", alt="фото автора")
 					h1.welcome_title Тетерев Артём
 					p.welcome_desk Личный сайт разработчика
-					include parts/_socials
-					include parts/_pagesMenu
+					ul.welsocial_list
+						li.welsocial_item
+							a.welsocial_link(href="https://vk.com/id97917569")
+								include ../img/icons/vk.svg
+						li.welsocial_item
+							a.welsocial_link(href="https://github.com/TeterevArtem")
+								include ../img/icons/github.svg
+						li.welsocial_item
+							a.welsocial_link(href="https://www.instagram.com/teterev.artem/?hl=ru")
+								include ../img/icons/in.svg
+					ul.pages_list
+						li.pages_item
+							a.pages_link(href="works.html") Мои работы
+						li.pages_item
+							a.pages_link(href="about.html") Обо мне
+						li.pages_item
+							a.pages_link(href="blog.html") Блог
 				.welcome_auth
 					h2.auth_title Авторизуйтесь
 					form.auth_form(action="#" method="GET")
@@ -45,8 +61,7 @@ body
 						.auth_btn
 							a.auth_link.auth_link-home(href="#") На главную
 							a.auth_link(href="#") Войти
-
-	footer.footer
-		span.footer_text|Тетерев Артём | Сделано с любовью | Loftschool
+		footer.welcome_footer
+			span.footer_text|Тетерев Артём | Сделано с любовью | Loftschool
 	script(src='js/jquery.min.js')
 	script(src='js/flip.js')

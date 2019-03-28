@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".auth_button").on("click",function(t){t.preventDefault(),$(".welcome_block").css("transform","rotateY(1620deg)")}),$(".auth_link-home").on("click",function(t){t.preventDefault(),$(".welcome_block").css("transform","rotateY(0deg)")})});
