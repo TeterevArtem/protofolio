@@ -31,17 +31,72 @@ html(lang="ru-Ru")
                                 img.about_img(src="img/sexy-cat.jpg")
                             h3.about_title|Кто я
                             article.about_desc
-                                p| Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel commodi blanditiis id exercitationem nam. Deserunt adipisci fugit ducimus iusto obcaecati voluptatum sapiente soluta explicabo repellat libero, consectetur a necessitatibus similique sit. Magnam quam illum eligendi! Neque maiores magni commodi suscipit quaerat excepturi ipsum illum nostrum quod veniam libero, blanditiis vitae ullam. Obcaecati et deleniti tenetur reiciendis debitis asperiores possimus tempore minus ipsam consequuntur distinctio, expedita vero hic, nulla omnis a architecto! Repellendus iste autem harum? Voluptate aliquid soluta deserunt impedit eos accusantium fugit eius repellendus, ab neque, sint amet inventore quasi reiciendis tempore ratione odio, at et dolorum repudiandae. Ducimus.
+                                p| Я веб разработчик из Бишкека. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                p| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
                     .about_content.about_content-right
-                        h3.skills_title Чем я могу быть вам полезен
-                        p| Больше всего меня привлекает Front-end, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                        h3.skills_logo Чем я могу быть вам полезен
+                        article.skill_desc
+                            p| Больше всего меня привлекает Front-end, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         .about_skills
-                            .about_frontEnd
-                                svg#skill_circle(viewbox='0 0 240 240' width='140' height='140')
-                                    circle(r='100' cx='120' cy='120')
-                                    circle.skill_sector(r='100' cx='120' cy='120')
-                            .about_backEnd
-                            .about_workFlow
+                            h3.skills_title| Frontend
+                            ul.skills_list
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| HTML5
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| CSS3
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| JavaScript & jQuery
+                            h3.skills_title| Backend
+                            ul.skills_list
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| PHP
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| mySQL
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| Node.js & npm
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| Mongo.db
+                            h3.skills_title| WorkFlow
+                            ul.skills_list
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| Git
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| Gulp
+                                li.skills_item
+                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                        circle.skill_inner(r='100' cx='120' cy='120')
+                                        circle.skill_sector(r='100' cx='120' cy='120')
+                                    span.circle_desc| Bower
+            .main_map
+                #map
+
             footer.footer_about
                 .footer_top
                     ul.footer_list
@@ -63,3 +118,5 @@ html(lang="ru-Ru")
                             span.author - Martin Golding
                 .footer_bottom
                     span.footer_text|Тетерев Артём | Сделано с любовью | Loftschool
+            script(src="js/map.js")
+            script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4aVW-zRvSoiF5yBNMWg3LVurqpkgVdOU&callback=initMap")

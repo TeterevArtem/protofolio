@@ -114,7 +114,8 @@
     width: 100%
     position: relative
     margin-top: rem(-178px)
-    padding-top: rem(175px)
+    padding-top: rem(195px)
+    padding-bottom: rem(40px)
     &:after
         width: 50%
         content: ''
@@ -149,13 +150,20 @@
     flex-wrap: wrap
     position: relative
     z-index: 5
+    color: $font-grey
+
 .about_content
     flex-basis: 50%
+    box-sizing: border-box
     &-left
         display: flex
         flex-wrap: wrap
         justify-content: center
-    
+    &-right
+        padding: 0 rem(40px)
+
+
+//left-block    
 .content_left
     text-align: center
     width: 50%
@@ -206,12 +214,98 @@
     width: 100%
     height: auto
 
-#skill_circle
-    fill: #dfdcd5
+.about_title
+    font-size: rem(35px)
+    font-family: $sansus
+    font-weight: 500
+    position: relative
+    text-transform: uppercase
+    &:after
+        content: ''
+        position: absolute
+        display: block
+        width: rem(89px)
+        height: rem(3px)
+        background: $font-grey
+        bottom: -95%
+        left: 50%
+        transform: translate(-50%, -50%)
 
-.skill_sector
-    stroke: #00ff00
+.about_desc
+    text-align: left 
+    margin-top: rem(50px)
+
+//right_block
+.skills_logo
+    margin: auto
+    font-family: $sansus
+    font-size: rem(35px)
+    font-weight: 500
+    text-transform: uppercase
+    position: relative
+    width: rem(300px)
+    text-align: center
+    &:after
+        content: ''
+        position: absolute
+        display: block
+        height: rem(3px)
+        width: rem(89px)
+        bottom: -43%
+        left: 50%
+        transform: translate(-50%,-50%)
+        background: $font-grey
+
+.skills_title
+    font-size: rem(28px)
+    margin-bottom: rem(20px)
+
+.skills_list
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    flex-wrap: wrap
+
+.skills_item
+    margin-right: rem(40px)
+    position: relative
+    &:last-child
+        margin-right: 0
+    .circle_desc
+        position: absolute
+        text-align: center
+        top: 47%
+        left: 50%
+        width: rem(70px)
+        transform: translate(-50%,-50%)
+        line-height: 1
+        font-size: 14px
+        color: $light-green
+
+.skill_desc
+    margin-top: rem(50px)
+//skill-circles
+.skill_circle
+    fill: none
     stroke-width: 25
-    fill: #ffffff
-    stroke-dasharray: 500
-    stroke-dashoffset: 300
+
+.skill_inner
+    fill: none
+    stroke: #dfdcd5
+    stroke-width: 35
+
+.skill_sector    
+    stroke-width: 35
+    stroke: $light-green
+    stroke-dasharray: 628
+    stroke-dashoffset: 314
+    transition: all 1s
+    transform-origin: center
+    transform: rotate(-90deg)
+
+//map
+
+
+#map
+    min-height: rem(1114px)
