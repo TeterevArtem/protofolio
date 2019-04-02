@@ -96,11 +96,19 @@ html(lang="ru-Ru")
                                     span.circle_desc| Bower
             .main_map
                 #map
+                .contacts
+                    h3.contacts_title| Контакты
+                    ul.contacts_list
+                        li.contacts_item.contacts_item-skype| atomic_man1990
+                        li.contacts_item.contacts_item-mail| teterev.artem@gmail.com
+                        li.contacts_item.contacts_item-phone| +996 705 33 22 83
+                        li.contacts_item.contacts_item-point| Ул.Куликовская 127
+                           
 
             footer.footer_about
                 .footer_top
                     ul.footer_list
-                        li.footer_item
+                        li.footer_item.footer_item-desc
                             p|Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
                         li.footer_item
                             ul.page_list
@@ -111,12 +119,12 @@ html(lang="ru-Ru")
                                 li.page_item
                                     a.page_link(href="blog.html")|Блог
                                 li.page_item
-                                    a.page_link(href="index.html")|8Авторизация
+                                    a.page_link(href="index.html")|Авторизация
                             include parts/_socials.pug
-                        li.footer_item
+                        li.footer_item.footer_item-blockquote
                             p|Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                            span.author - Martin Golding
+                            span.footer_author - Martin Golding
                 .footer_bottom
-                    span.footer_text|Тетерев Артём | Сделано с любовью | Loftschool
+                    span.footer_text|&copy; Тетерев Артём | Сделано с любовью | Loftschool
             script(src="js/map.js")
             script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4aVW-zRvSoiF5yBNMWg3LVurqpkgVdOU&callback=initMap")

@@ -306,6 +306,133 @@
 
 //map
 
-
 #map
     min-height: rem(1114px)
+    
+.main_map
+    position: relative
+    z-index: -1
+//contacts
+.contacts
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: rem(380px)
+    background: rgba(255,255,255, .8)
+    border-radius: rem(5px) 
+    z-index: 999
+    padding: rem(40px)
+    box-sizing: border-box
+
+.contacts_title
+    margin-top: 0
+    font-family: $sansus
+    font-weight: 300
+    font-size: rem(35px)
+    text-transform: uppercase
+    position: relative
+    color: $font-grey
+    text-align: center
+    &:after
+        content: ''
+        display: block
+        background: $font-grey
+        width: rem(90px)
+        height: rem(3px)
+        position: absolute
+        bottom: -100%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+.contacts_list
+    list-style: none
+    margin: 0 auto
+    line-height: 3 
+
+.contacts_item
+    color: $contact-font
+    position: relative
+    &:after
+        content: ''
+        display: inline-block
+        width: rem(25px)
+        height: rem(25px)
+        position: absolute
+        top: 50%
+        right: 100%
+        transform: translate(-50%,-50%)
+        background-position: center center
+        background-size: contain
+        background-repeat: no-repeat
+
+$contacts: mail, phone, point, skype
+@each $contact in $contacts
+    .contacts_item-#{$contact}:after
+        background-image: url(../img/icons/#{$contact}.svg)
+
+
+//footer
+.footer_about
+    margin-top: -185px
+    background: rgba(0,0,0,.7)
+
+.footer_top
+    max-width: rem(1800px)
+    box-sizing: border-box
+    margin: auto
+
+.footer_list
+    list-style: none
+    margin: rem(30px) 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    align-items: top
+
+.footer_item
+    max-width: 33%
+    border-left: 1px solid rgba(#fff, .5)
+    padding-left: rem(30px)
+    &:first-child
+        border-left: none
+        padding: 0
+
+.page_list
+    list-style: none
+    margin: 0 0 rem(30px) 0
+    padding: 0
+    display: flex
+    align-items: center
+
+.page_item
+    margin-right: rem(40px)
+    &:last-child
+        margin-right: 0
+.page_link
+    text-decoration: none
+    color: #ffffff
+    &:hover
+        opacity: .5
+
+.footer_item-desc>p
+    margin: 0
+    color: #ffffff
+    font-family: sans-serif
+    font-weight: 300
+
+.footer_item-blockquote>p
+    margin: 0
+    color: rgba(#ccc, .5)
+    font-family: sans-serif
+    font-style: italic
+
+.footer_author
+    color: rgba(#fff, .7)
+
+.footer_bottom
+    text-align: center
+    background: rgba($light-green, .8)
+    color: #ffffff
+    font-family: sans-serif
+    font-weight: 300
