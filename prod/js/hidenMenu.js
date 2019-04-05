@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".humburger_menu").on("click",function(){var e=$(this),n=e.closest(".wrapper"),i=n.find(".wrapper_inner"),s=n.find(".hidden_item");e.toggleClass("active"),i.toggleClass("active"),e.hasClass("active")?s.stop(!0).slideDown(500):s.stop(!0).slideUp(),console.log(hiddenMenu)})});

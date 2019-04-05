@@ -2,7 +2,23 @@
     display: flex
     flex-direction: column
     min-height: 100%
+    position: relative
 
+.wrapper_inner
+    width: 0%
+    height: 100%
+    background: rgba($green, .8)
+    position: absolute
+    z-index: 100
+    top: 0
+    transition: .5s
+    
+.wrapper_inner-right
+    right: 0
+
+.wrapper_inner.active
+    width: 50%
+    
 
 .header
     background: url(../img/background/water.jpg) center center no-repeat
@@ -52,8 +68,10 @@
         height: auto
 
 .humburger_menu
+    position: relative
     cursor: pointer
-    
+    z-index: 100
+
 .humburger_middle
     display: inline-block
     height: rem(5px)
@@ -80,7 +98,7 @@
         left: 0
         transform: translateY(-150%)
 
-.humburger_menu:hover .humburger_middle
+.humburger_menu.active .humburger_middle
     visibility: hidden
     &:after
         top: 0

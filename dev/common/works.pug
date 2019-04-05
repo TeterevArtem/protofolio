@@ -1,0 +1,46 @@
+extends about.pug
+block content
+    .main_works
+        .work_content
+            .content_head
+                h1.work_title|Мои работы
+            .slider
+                .slider_content.slider_content-left
+                    h3.slider_title|Сайт школы онлайн образования
+                    .slider_desc|HTML, CSS, JavaScript
+                    a.slider_link(href="#")|Посмотреть сайт
+                .slider_content.slider_content-right
+                    ul.slider_list
+                        li.slider_item
+                            img.slider_image(src="#" alt="какая-то картинка")
+                        li.slider_item
+                            img.slider_image(src="#" alt="какая-то картинка")
+                        li.slider_item
+                            img.slider_image(src="#" alt="какая-то картинка")
+                    .slider_controls
+                        a.slider_btn.slider_btn-prev(href="#")
+                        a.slider_btn.slider_btn-next(href="#")
+            .works_comment
+                h2.comment_title|Что обо мне говорят
+                ul.comment_list
+                    li.comment_item
+                        img.comment_img(src="#" alt="")
+                        article.comment_text
+                            p|Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        span.comment_name| Ковальчук Дмитрий
+                        span.comment_position|-основатель Loftschool
+                    li.comment_item
+                        img.comment_img(src="#" alt="")
+                        article.comment_text
+                            p|Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
+                        span.comment_name| Зар Захаров
+                        span.comment_position| -главный преподаватель
+                .contact_form
+                    h3.form_title|Связаться со мной
+                    form(action="#" method="GET")
+                        input(type="text" require class="form_input" placeholder="Имя")
+                        input(type="text" require class="form_input" placeholder="Email")
+                        textarea(class="form_textarea" placeholder="Ваше сообщение")
+                        button(type="submit" class="form_button")|Отправить
+                        buttom(type="reset" class="form_button")|Очистить
+                a.arrow_up(href="#")

@@ -1,0 +1,41 @@
+.hidden_nav
+    position: absolute
+    top: 15%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 101
+    
+
+.hidden_list
+    list-style: none
+    margin: 0
+    padding: 0
+    text-align: center
+
+.hidden_item
+     margin-bottom: rem(90px)
+     display: none
+
+.hidden_link
+    text-decoration: none
+    color: #ffffff
+    text-transform: uppercase
+    font-family: $sansus
+    font-size: rem(63px)
+    position: relative
+    &:after
+        content: ''
+        position: absolute
+        width: rem(90px)
+        height: rem(3px)
+        background: #ffffff
+        bottom: -25%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0
+        transition: .3s
+    &:hover
+        &:after
+            opacity: 1
+
+    

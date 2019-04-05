@@ -8,123 +8,95 @@ html(lang="ru-Ru")
         title About
     body
         .wrapper
-            header.header
-                .header_content
-                    .header_top
-                        include parts/_socials.pug
-                        .humburger_menu
-                            span.humburger_middle
-                    .header_middle
-                        .header_image
-                            img.header_img(src='img/sexy-cat.jpg')
-                        h4.header_title Тетевев Артём
-                        span.header_desc Личный сайт разработчика
-                    .header_bottom
-                        a.arrow_bottom(href="#")
-            .main_about
-                .main_content
-                    .about_content.about_content-left
-                        .content_left
-                            h1.about_logo|Обо мне
-                        .content_left
-                            .about_image
-                                img.about_img(src="img/sexy-cat.jpg")
-                            h3.about_title|Кто я
-                            article.about_desc
-                                p| Я веб разработчик из Бишкека. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                                p| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
-                    .about_content.about_content-right
-                        h3.skills_logo Чем я могу быть вам полезен
-                        article.skill_desc
-                            p| Больше всего меня привлекает Front-end, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                        .about_skills
-                            h3.skills_title| Frontend
-                            ul.skills_list
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| HTML5
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| CSS3
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| JavaScript & jQuery
-                            h3.skills_title| Backend
-                            ul.skills_list
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| PHP
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| mySQL
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| Node.js & npm
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| Mongo.db
-                            h3.skills_title| WorkFlow
-                            ul.skills_list
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| Git
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| Gulp
-                                li.skills_item
-                                    svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
-                                        circle.skill_inner(r='100' cx='120' cy='120')
-                                        circle.skill_sector(r='100' cx='120' cy='120')
-                                    span.circle_desc| Bower
-            .main_map
-                #map
-                .contacts
-                    h3.contacts_title| Контакты
-                    ul.contacts_list
-                        li.contacts_item.contacts_item-skype| atomic_man1990
-                        li.contacts_item.contacts_item-mail| teterev.artem@gmail.com
-                        li.contacts_item.contacts_item-phone| +996 705 33 22 83
-                        li.contacts_item.contacts_item-point| Ул.Куликовская 127
+            include parts/_hiddenWrapper.pug
+            include parts/_header.pug
+            block content
+                .main_about
+                    .main_content
+                        .about_content.about_content-left
+                            .content_left
+                                h1.about_logo|Обо мне
+                            .content_left
+                                .about_image
+                                    img.about_img(src="img/sexy-cat.jpg")
+                                h3.about_title|Кто я
+                                article.about_desc
+                                    p| Я веб разработчик из Бишкека. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                    p| Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут все классно и красиво!
+                        .about_content.about_content-right
+                            h3.skills_logo Чем я могу быть вам полезен
+                            article.skill_desc
+                                p| Больше всего меня привлекает Front-end, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                            .about_skills
+                                h3.skills_title| Frontend
+                                ul.skills_list
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| HTML5
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| CSS3
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| JavaScript & jQuery
+                                h3.skills_title| Backend
+                                ul.skills_list
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| PHP
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| mySQL
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| Node.js & npm
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| Mongo.db
+                                h3.skills_title| WorkFlow
+                                ul.skills_list
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| Git
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| Gulp
+                                    li.skills_item
+                                        svg.skill_circle(viewbox='0 0 240 240' width='120' height='120')
+                                            circle.skill_inner(r='100' cx='120' cy='120')
+                                            circle.skill_sector(r='100' cx='120' cy='120')
+                                        span.circle_desc| Bower
+                .main_map
+                    #map
+                    .contacts
+                        h3.contacts_title| Контакты
+                        ul.contacts_list
+                            li.contacts_item.contacts_item-skype| atomic_man1990
+                            li.contacts_item.contacts_item-mail| teterev.artem@gmail.com
+                            li.contacts_item.contacts_item-phone| +996 705 33 22 83
+                            li.contacts_item.contacts_item-point| Ул.Куликовская 127
                            
 
-            footer.footer_about
-                .footer_top
-                    ul.footer_list
-                        li.footer_item.footer_item-desc
-                            p|Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
-                        li.footer_item
-                            ul.page_list
-                                li.page_item
-                                    a.page_link(href="works.html")|Мои работы
-                                li.page_item
-                                    a.page_link(href="about.html")|Обо мне
-                                li.page_item
-                                    a.page_link(href="blog.html")|Блог
-                                li.page_item
-                                    a.page_link(href="index.html")|Авторизация
-                            include parts/_socials.pug
-                        li.footer_item.footer_item-blockquote
-                            p|Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
-                            span.footer_author - Martin Golding
-                .footer_bottom
-                    span.footer_text|&copy; Тетерев Артём | Сделано с любовью | Loftschool
+            include parts/_footer.pug
+            script(src="js/jquery.min.js")
             script(src="js/map.js")
+            script(src="js/hiddenMenu.js")
             script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4aVW-zRvSoiF5yBNMWg3LVurqpkgVdOU&callback=initMap")
