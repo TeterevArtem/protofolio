@@ -11,16 +11,16 @@
     <div class="wrapper">
       <div class="wrapper_inner"></div>
       <div class="wrapper_inner wrapper_inner-right"></div>
-      <nav class="hidden_nav">
-        <ul class="hidden_list">
-          <li class="hidden_item"><a class="hidden_link" href="works.html">Мои работы</a></li>
-          <li class="hidden_item"><a class="hidden_link" href="blog.html">Блог</a></li>
-          <li class="hidden_item"><a class="hidden_link" href="about.html">Обо мне</a></li>
-          <li class="hidden_item"><a class="hidden_link" href="index.html">Авторизация</a></li>
-        </ul>
-      </nav>
       <header class="header">
         <div class="header_content">
+          <nav class="hidden_nav">
+            <ul class="hidden_list">
+              <li class="hidden_item"><a class="hidden_link" href="works.html">Мои работы</a></li>
+              <li class="hidden_item"><a class="hidden_link" href="blog.html">Блог</a></li>
+              <li class="hidden_item"><a class="hidden_link" href="about.html">Обо мне</a></li>
+              <li class="hidden_item"><a class="hidden_link" href="index.html">Авторизация</a></li>
+            </ul>
+          </nav>
           <div class="header_top">
             <ul class="social_list">
               <li class="social_item"><a class="social_link social_link" href="https://vk.com/id97917569"><?xml version="1.0" encoding="utf-8"?>
@@ -95,23 +95,22 @@
               <div class="slider_desc">HTML, CSS, JavaScript</div><a class="slider_link" href="#">Посмотреть сайт</a>
             </div>
             <div class="slider_content slider_content-right">
-              <ul class="slider_list">
-                <li class="slider_item"><img class="slider_image" src="#" alt="какая-то картинка"/></li>
-                <li class="slider_item"><img class="slider_image" src="#" alt="какая-то картинка"/></li>
-                <li class="slider_item"><img class="slider_image" src="#" alt="какая-то картинка"/></li>
-              </ul>
-              <div class="slider_controls"><a class="slider_btn slider_btn-prev" href="#"></a><a class="slider_btn slider_btn-next" href="#"></a></div>
+              <div class="slider_main"><img class="slider_img" src="#" alt="1"/></div>
+              <div class="slider_bottom slider_bottom-left"><img class="slider_img slider_img-bottom" src="" alt="2"/></div>
+              <div class="slider_bottom slider_bottom-right"><img class="slider_img slider_img-bottom" src="" alt="3"/></div>
             </div>
           </div>
           <div class="works_comment">
             <h2 class="comment_title">Что обо мне говорят</h2>
             <ul class="comment_list">
-              <li class="comment_item"><img class="comment_img" src="#" alt=""/>
+              <li class="comment_item">
+                <div class="comment_image-wrap"><img class="comment_img" src="#" alt=""/></div>
                 <article class="comment_text">
                   <p>Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
                 </article><span class="comment_name">Ковальчук Дмитрий</span><span class="comment_position">-основатель Loftschool</span>
               </li>
-              <li class="comment_item"><img class="comment_img" src="#" alt=""/>
+              <li class="comment_item">
+                <div class="comment_image-wrap"><img class="comment_img" src="#" alt=""/></div>
                 <article class="comment_text">
                   <p>Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!</p>
                 </article><span class="comment_name">Зар Захаров</span><span class="comment_position">-главный преподаватель</span>
@@ -130,6 +129,7 @@
           </div>
         </div>
       </div>
+      <script src="js/slider.js"></script>
       <footer class="footer_about">
         <div class="footer_top">
           <ul class="footer_list">
@@ -205,9 +205,9 @@
         <div class="footer_bottom"><span class="footer_text">&copy; Тетерев Артём | Сделано с любовью | Loftschool</span></div>
       </footer>
       <script src="js/jquery.min.js"></script>
-      <script src="js/map.js"></script>
       <script src="js/hiddenMenu.js"></script>
       <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4aVW-zRvSoiF5yBNMWg3LVurqpkgVdOU&amp;callback=initMap"></script>
+      <script src="js/map.js"></script>
     </div>
   </body>
 </html>

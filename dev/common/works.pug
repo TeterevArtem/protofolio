@@ -4,33 +4,32 @@ block content
         .work_content
             .content_head
                 h1.work_title|Мои работы
+            block unique
             .slider
                 .slider_content.slider_content-left
                     h3.slider_title|Сайт школы онлайн образования
                     .slider_desc|HTML, CSS, JavaScript
                     a.slider_link(href="#")|Посмотреть сайт
                 .slider_content.slider_content-right
-                    ul.slider_list
-                        li.slider_item
-                            img.slider_image(src="#" alt="какая-то картинка")
-                        li.slider_item
-                            img.slider_image(src="#" alt="какая-то картинка")
-                        li.slider_item
-                            img.slider_image(src="#" alt="какая-то картинка")
-                    .slider_controls
-                        a.slider_btn.slider_btn-prev(href="#")
-                        a.slider_btn.slider_btn-next(href="#")
+                   .slider_main
+                        img.slider_img(src="#", alt="1")
+                   .slider_bottom.slider_bottom-left
+                        img.slider_img.slider_img-bottom(src="", alt="2")
+                   .slider_bottom.slider_bottom-right
+                        img.slider_img.slider_img-bottom(src="", alt="3")
             .works_comment
                 h2.comment_title|Что обо мне говорят
                 ul.comment_list
                     li.comment_item
-                        img.comment_img(src="#" alt="")
+                        .comment_image-wrap
+                            img.comment_img(src="#" alt="")
                         article.comment_text
                             p|Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                         span.comment_name| Ковальчук Дмитрий
                         span.comment_position|-основатель Loftschool
                     li.comment_item
-                        img.comment_img(src="#" alt="")
+                        .comment_image-wrap
+                            img.comment_img(src="#" alt="")
                         article.comment_text
                             p|Этот код выдержет любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!
                         span.comment_name| Зар Захаров
@@ -44,3 +43,5 @@ block content
                         button(type="submit" class="form_button")|Отправить
                         buttom(type="reset" class="form_button")|Очистить
                 a.arrow_up(href="#")
+    block scripts
+    script(src="js/slider.js")

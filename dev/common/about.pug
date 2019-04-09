@@ -84,6 +84,7 @@ html(lang="ru-Ru")
                                             circle.skill_inner(r='100' cx='120' cy='120')
                                             circle.skill_sector(r='100' cx='120' cy='120')
                                         span.circle_desc| Bower
+                block unique
                 .main_map
                     #map
                     .contacts
@@ -94,9 +95,9 @@ html(lang="ru-Ru")
                             li.contacts_item.contacts_item-phone| +996 705 33 22 83
                             li.contacts_item.contacts_item-point| Ул.Куликовская 127
                            
-
             include parts/_footer.pug
-            script(src="js/jquery.min.js")
-            script(src="js/map.js")
-            script(src="js/hiddenMenu.js")
+            include parts/_scripts.pug
+            block script
             script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4aVW-zRvSoiF5yBNMWg3LVurqpkgVdOU&callback=initMap")
+            script(src="js/map.js")
+                

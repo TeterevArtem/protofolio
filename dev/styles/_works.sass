@@ -1,43 +1,33 @@
 .work_content
-    
-
-
-
 .content_head
     text-align: center
     position: relative
-    &:after
-        content: ''
-        width: 100%
-        height: 100%
-        position: absolute
-        bottom: 50%
-        left: 0
-        background: url(../img/background/bg.svg) center center no-repeat
-        background-size: cover
+    background: url(../img/background/bg.svg) center center no-repeat
+    background-size: cover
+    margin-top: -185px
+    padding: rem(180px) rem(180px) rem(50px) rem(180px)
 
 .work_title
-    display: inline-block
-    margin: 0
     font-size: rem(63px)
     font-family: $sansus
     position: relative
     color: $font-grey
     text-align: center
     font-weight: 300
-    padding: rem(60px) 
     &:after
         content: ''
         position: absolute
         left: 50%
-        bottom: -10%
+        bottom: -150%
         transform: translate(-50%, 0)
         width: rem(90px)
         height: rem(3px)
         background: $font-grey
     &:before
         content: ''
+        box-sizing: border-box
         display: block
+        padding: rem(70px)
         position: absolute
         width: 100%
         height: 100%
@@ -47,3 +37,120 @@
         background: url(../img/background/works_header.svg) center center no-repeat
         background-size: contain
         opacity: .25
+
+.slider
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.slider_content
+    width: 50%
+    height: 100vh
+
+
+.slider_content-left
+    background: #ebefe2
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.slider_content-right
+    background: #e1e4d7
+    display: flex
+    flex-wrap: wrap
+
+.slider_main
+    width: 100%
+    height: 70%
+
+.slider_bottom
+    width: 50%
+    height: 30%
+    position: relative
+    &:after
+        content: ''
+        display: block;
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0, 0, 0, .3)
+        transition: .3s
+    &:before
+        content: ''
+        position: absolute
+        width: 30px
+        height: 20px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 10
+        background-size: cover
+        transition: .3s
+    &:hover
+        &:after
+            background: rgba(0,0,0, .2)
+        &:before
+            top: 45%
+
+.slider_bottom-left:before
+    background: url(../img/icons/portf_arrow_down.svg) center center no-repeat
+    z-index: 10
+    background-size: cover
+
+.slider_bottom-right:before
+    background: url(../img/icons/portf_arrow_up.svg) center center no-repeat
+    z-index: 10
+    background-size: cover
+
+
+.works_comment
+    background: url(../img/background/works_bg.png)center center no-repeat
+    background-size: cover
+
+.comment_title
+    margin: auto
+    line-height: 1
+    padding: rem(18px)
+    width: rem(500px)
+    text-align: center
+    font-family: $sansus
+    text-transform: uppercase
+    color: $font-grey
+    font-size: rem(63px)
+    position: relative
+    font-weight: 300
+    &:after
+        content: ''
+        background: $font-grey
+        position: absolute
+        bottom: -10%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: rem(90px)
+        height: rem(3px)
+    &:before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 100%
+        height: 100%
+        background: url(../img/background/about_header.svg) center center no-repeat
+        opacity: .25
+
+.comment_list
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: center
+    align-items: center
+
+.comment_item
+    width: rem(380px)
+    text-align: center
